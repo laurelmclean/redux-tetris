@@ -1,5 +1,5 @@
 import React from 'react';
-import { UseDispatch, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { pause, resume, restart } from '../features/gameSlice';
 
 export default function ScoreBoard() {
