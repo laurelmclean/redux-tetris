@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tetris/static/css/main.99a66ce1.css",
-    "main.js": "/tetris/static/js/main.64cc8c1e.js",
-    "static/js/592.bd8fbe30.chunk.js": "/tetris/static/js/592.bd8fbe30.chunk.js",
-    "index.html": "/tetris/index.html",
-    "main.99a66ce1.css.map": "/tetris/static/css/main.99a66ce1.css.map",
-    "main.64cc8c1e.js.map": "/tetris/static/js/main.64cc8c1e.js.map",
-    "592.bd8fbe30.chunk.js.map": "/tetris/static/js/592.bd8fbe30.chunk.js.map"
+    "main.css": "/redux-tetris/static/css/main.99a66ce1.css",
+    "main.js": "/redux-tetris/static/js/main.9334ed85.js",
+    "static/js/592.bd8fbe30.chunk.js": "/redux-tetris/static/js/592.bd8fbe30.chunk.js",
+    "index.html": "/redux-tetris/index.html",
+    "main.99a66ce1.css.map": "/redux-tetris/static/css/main.99a66ce1.css.map",
+    "main.9334ed85.js.map": "/redux-tetris/static/js/main.9334ed85.js.map",
+    "592.bd8fbe30.chunk.js.map": "/redux-tetris/static/js/592.bd8fbe30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.99a66ce1.css",
-    "static/js/main.64cc8c1e.js"
+    "static/js/main.9334ed85.js"
   ]
 }
