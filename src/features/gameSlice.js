@@ -3,6 +3,7 @@ import { defaultState } from '../utils';
 import { canMoveTo, nextRotation, addBlockToGrid, checkRows, randomShape } from '../utils';
 
 export const gameSlice = createSlice({
+    
     name: 'game',
     initialState: defaultState(),
     reducers: {

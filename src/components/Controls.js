@@ -44,7 +44,7 @@ export default function Controls(props) {
                 onClick={(e) => {
                     dispatch(moveLeft())
                 }
-                }>Left</button>
+                }><i class="fa-solid fa-left-long"></i></button>
 
             {/* right */}
             <button
@@ -53,7 +53,7 @@ export default function Controls(props) {
                 onClick={(e) => {
                     dispatch(moveRight())
                 }
-                }>Right</button>
+                }><i class="fa-solid fa-right-long"></i></button>
 
             {/* rotate */}
             <button
@@ -62,7 +62,7 @@ export default function Controls(props) {
                 onClick={(e) => {
                     dispatch(rotate())
                 }
-                }>Rotate</button>
+                }><i class="fa-solid fa-rotate"></i></button>
 
             {/* down */}
             <button
@@ -71,7 +71,7 @@ export default function Controls(props) {
                 onClick={(e) => {
                     dispatch(moveDown())
                 }
-                }>Down</button>
+                }><i class="fa-solid fa-down-long"></i></button>
 
         </div>
     )

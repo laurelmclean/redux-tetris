@@ -8,8 +8,7 @@ export default function ScoreBoard() {
 
     return (
         <div className="score-board">
-            <div>Score: {score}</div>
-            <div>Level: 1</div>
+            <div className='score-text'>Score: {score}</div>
             <button className="score-board-button" onClick={(e) => {
                 if (gameOver) { return }
                 if (isRunning) {
@@ -18,10 +17,10 @@ export default function ScoreBoard() {
                     dispatch(resume())
                 }
             }
-            }>{isRunning ? 'Pause' : 'Play'}</button>
+            }>{isRunning ? <i class="fa-solid fa-pause"></i> : <i class="fa-solid fa-play"></i>}</button>
             <button className="score-board-button" onClick={(e) => {
                 dispatch(restart())
-            }}>Restart</button>
+            }}><i class="fa-solid fa-power-off"></i></button>
         </div>
     )
 }

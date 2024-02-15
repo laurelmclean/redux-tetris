@@ -9,13 +9,13 @@
 
   /* Square Colors: background colors for the squares.*/
   --color-0: #eaeaea;
-  --color-1: #ff6600;
-  --color-2: #eec900;
-  --color-3: #0000ff;
-  --color-4: #cc00ff;
-  --color-5: #00ff00;
-  --color-6: #66ccff;
-  --color-7: #ff0000;
+  --color-1: #FECF47;
+  --color-2: #57E9DA;
+  --color-3: #F16E86;
+  --color-4: #D675B6;
+  --color-5: #AFDF6F;
+  --color-6: #C60745;
+  --color-7: #53B55E;
 
   /* Button Colors */
   --button-color-t: rgba(200, 200, 200, 1);
@@ -27,7 +27,7 @@
   --tile-size: 20px for example will set the size of the grid squares. */
   --cols: 10;
   --rows: 18;
-  --tile-size: 20px;
+  --tile-size: 30px;
   --border-width: 5px;
 }
 
@@ -64,16 +64,19 @@
   background-color: var(--color-7);
 }
 
+body {
+  background-image: url(https://img.freepik.com/premium-photo/festive-easter-candy-pastel-colors-form-pyramids-lollipops_124507-32737.jpg);
+  background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* Grid Square */
 .grid-square {
   border-style: solid;
   width: var(--tile-size);
   height: var(--tile-size);
-  border-width: var(--border-width);
-  border-left-color: var(--border-left-color);
-  border-top-color: var(--border-top-color);
-  border-right-color: var(--border-right-color);
-  border-bottom-color: var(--border-bottom-color);
+  border-width: 1px;
+  border-color: brown;
 }
 
 * {
@@ -86,6 +89,7 @@
   grid-gap: 0;
   align-self: flex-start;
   grid-area: c; /* Assign to grid area c */
+
 }
 
 /* Next Block */
@@ -97,52 +101,58 @@
     /* Grid area l left column */
 }
 
-/* Score Board */
+/* Score Board Button */
 .score-board-button {
-  display: block;
-  padding: 1em;
-  border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
+  --size: calc(var(--tile-size) * 2.5);
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
+    display: block;
+    background-color: var(--color-3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+  
+    /* Add hover effect */
+    &:hover {
+      background-color: var(--color-1);
+    }
 }
 
+.score-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+}
+
+html,
 body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* App */
 .App {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   --col-side: calc(var(--tile-size) * 4);
   --col-center: calc(var(--tile-size) * 10);
   --grid-height: calc(var(--tile-size) * 18);
 
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
-  margin: auto;
   display: grid;
-
   grid-gap: var(--tile-size) var(--tile-size);
-  /* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
   grid-template-columns: var(--col-side) var(--col-center) var(--col-side);
-  /* Defines three rows of `100px`, `--grid-height`, and 100px. */
   grid-template-rows: 100px var(--grid-height) 100px;
-
-  /* This defines the areas on the grid with names: 'h', 'l', 'c', 'r',
-  and 'b'. The '.' represents an empty cell on the grid. */
   grid-template-areas: "h h h"
     "l c r"
     ". b .";
+  background-color: rgba(242, 144, 162, 0.494);
+  padding: 20px;
+  margin: 20px;
 }
 
 /* App-header */
@@ -150,9 +160,12 @@ code {
   grid-area: h;
 }
 
+
 /* score-board */
 .score-board {
   grid-area: r;
+  display: flex;
+  flex-direction: column;
 }
 
 /* controls */
@@ -169,13 +182,16 @@ code {
   height: var(--size);
   text-align: center;
   display: block;
-  border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
-}
+  background-color: var(--color-2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
+
+  /* Add hover effect */
+  &:hover {
+    background-color: var(--color-1);
+  }
+}
 /* Message Popup Styles */
 .message-popup {
   position: absolute;

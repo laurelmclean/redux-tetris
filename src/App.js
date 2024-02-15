@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Tetris Redux</h1>
+        <img src="header.png" alt="Candyland Tetris" height='250px' />
       </header>
       <GridBoard />
       <NextBlock />
