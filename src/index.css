@@ -122,6 +122,8 @@ body {
 .score-text {
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
+  font-weight: bold;
+  color: white;
 }
 
 html,
@@ -137,12 +139,10 @@ body {
 .App {
   justify-content: center;
   align-items: center;
-  padding: 10px;
   --col-side: calc(var(--tile-size) * 4);
   --col-center: calc(var(--tile-size) * 10);
   --grid-height: calc(var(--tile-size) * 18);
 
-  width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
   display: grid;
   grid-gap: var(--tile-size) var(--tile-size);
   grid-template-columns: var(--col-side) var(--col-center) var(--col-side);
@@ -151,8 +151,7 @@ body {
     "l c r"
     ". b .";
   background-color: rgba(242, 144, 162, 0.494);
-  padding: 20px;
-  margin: 20px;
+  padding: 40px;
 }
 
 /* App-header */
@@ -194,13 +193,16 @@ body {
 }
 /* Message Popup Styles */
 .message-popup {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 2em;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: calc(var(--tile-size) * 10);
-  height: calc(var(--tile-size) * 10);
-  background-color: rgba(255, 255, 255, 0.5);
+  height: calc(var(--tile-size) * 8);
+  background-color: var(--color-3);
   text-align: center;
 }
 
